@@ -48,9 +48,9 @@ Back
 After assembling your PCB, use the firmware.ino file in the repository to flash your Arduino Nano. You can customise messages and timings by editing the code with the Arduino IDE.
 
 ## BOM
-The BOM **without** specific values is linked here (GitHub directory or [Google Sheets](https://docs.google.com/spreadsheets/d/1nt2ZC4SuuWCHXpdcqgjWmxoxNzFQoS0aQbvXVXabcSM/edit?gid=0#gid=0). The total cost for the project should not exceed 13USD (after averaging costs out by dividing by the bulk bought quantity).
+The BOM **without** specific values is linked here ([GitHub directory](https://github.com/LinuxDinoGitHub/Squawk-2.0/blob/main/BOM/BOM_kicad_generated.csv) or [Google Sheets](https://docs.google.com/spreadsheets/d/1nt2ZC4SuuWCHXpdcqgjWmxoxNzFQoS0aQbvXVXabcSM/edit?gid=0#gid=0). The total cost for the project should not exceed 13USD (after averaging costs out by dividing by the bulk bought quantity).
 
-The BOM **with** specific values is here (Github director or [Google Sheets](https://docs.google.com/spreadsheets/d/1nt2ZC4SuuWCHXpdcqgjWmxoxNzFQoS0aQbvXVXabcSM/edit?gid=1614936167#gid=1614936167))
+The BOM **with** specific values is here (Github [directory](https://github.com/LinuxDinoGitHub/Squawk-2.0/blob/main/BOM/BOM_with_links.csv) or [Google Sheets](https://docs.google.com/spreadsheets/d/1nt2ZC4SuuWCHXpdcqgjWmxoxNzFQoS0aQbvXVXabcSM/edit?gid=1614936167#gid=1614936167))
 
 ### 3D printed case
 The 3D printed case is not accounted for in the BOM as I don't know how much it will cost. The expected filament cost is around 10$ USD, but a lot of the parts can be repurposed with whatever you have at home (e.g. a tin box, an old drawer, cardboard, etc.)
