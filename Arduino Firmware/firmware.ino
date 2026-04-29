@@ -10,7 +10,7 @@
 #define INTERRUPT_PIN 2
 #define RESET_PIN 12
 
-//Volume control
+//Volume control pins
 #define BAND_UP 7    // Next Band
 #define BAND_DOWN 8  // Previous Band
 #define VOL_UP 5    // Volume Volume Up
@@ -19,12 +19,12 @@
 
 #define MIN_ELAPSED_TIME 100
 
-// EEPROM - Stroring control variables
-const uint8_t app_id = 27; // Useful to check the EEPROM content before processing useful data
+// EEPROM - don't change this
+const uint8_t app_id = 27;
 const int eeprom_address = 0;
 
 long elapsedButton = millis();
-
+// The following code is from Ricardo's library, all credits to him
 typedef struct {
   int8_t bandIdx;
   uint16_t botton;    // botton frequency (10350 = 103.5Mhz; 9775 = 9,775 kHz)
@@ -90,11 +90,11 @@ void setup() {
   pinMode(BAND_DOWN, INPUT_PULLUP);
   pinMode(VOL_UP, INPUT_PULLUP);
   pinMode(VOL_DOWN, INPUT_PULLUP);
-  // Reads the initial state of the outputA
+  // rotary encoder setup
   aLastState = digitalRead(VOL_UP);   
 
-  delay(150); // Needed to make the OLED starts
-  display.begin(SSD1306_SWITCHCAPVCC, I2C_ADDRESS); // Address 0x3C for 128x32
+  delay(150); 
+  display.begin(SSD1306_SWITCHCAPVCC, I2C_ADDRESS);
   display.clearDisplay();
   display.display();
   display.setTextColor(SSD1306_WHITE);
@@ -103,8 +103,6 @@ void setup() {
   display.print((char *)"Squawk Radio\n\nby LinuxDino");
   display.display();
 
- 
-  // RESET EEPROM
   if (digitalRead(BAND_UP) == LOW)
   {
     EEPROM.update(eeprom_address, 0);
@@ -113,7 +111,7 @@ void setup() {
     delay(1500);
   }
 
-  // Some crystal oscillators may need more time to stabilize. Uncomment the following line if you are experiencing issues starting the receiver.
+  // Some crystal oscillators may need more time to stabilise. Uncomment the following line if you are experiencing issues starting the receiver.
   // si4844.setCrystalOscillatorStabilizationWaitTime(1);
   si4844.setup(RESET_PIN, INTERRUPT_PIN, -1, 100000);
 
@@ -131,16 +129,16 @@ void setup() {
   displayDial();
 }
 
-void saveAllReceiverInformation()
+void saveAllReceiverInformation() // Saves the stored volume
 {
-  EEPROM.update(eeprom_address, app_id);             // stores the app id;
-  EEPROM.update(eeprom_address + 1, si4844.getVolume()); // stores the current Volume
-  EEPROM.update(eeprom_address + 2, bandIdx);        // Stores the current band index
+  EEPROM.update(eeprom_address, app_id);          
+  EEPROM.update(eeprom_address + 1, si4844.getVolume()); 
+  EEPROM.update(eeprom_address + 2, bandIdx);
 }
 
-void readAllReceiverInformation()
+void readAllReceiverInformation() // Gets the stored volume
 {
-  si4844.setVolume(EEPROM.read(eeprom_address + 1)); // Gets the stored volume;
+  si4844.setVolume(EEPROM.read(eeprom_address + 1)); 
   bandIdx = EEPROM.read(eeprom_address + 2);
 
 }
@@ -168,11 +166,8 @@ void displayDial()
 
   display.setFont(NULL);
   display.clearDisplay();
-
- 
   display.setCursor(3, 0);
   display.print(si4844.getBandMode());
-
   display.setCursor(48, 0);  
   if ( si4844.getStatusStationIndicator() != 0) 
     display.print("OK");
@@ -181,7 +176,6 @@ void displayDial()
 
   display.setCursor(105, 0);  
   display.print(tabBand[bandIdx].desc);
-
   display.setCursor(16, 31);
   display.print(si4844.getFormattedFrequency(2,'.'));
   display.setCursor(104, 30);
@@ -189,14 +183,13 @@ void displayDial()
   display.print(" ");
   display.print(unit);
   
-  if ( si4844.getStatusBandMode() == 0) {
+  if ( si4844.getStatusBandMode() == 0) { // Stereo/Mono with the band mode, but this project doesn't use the band switch so this part will be set automatically
     display.setCursor(75, 25);
     if (si4844.getStatusStereo() == 1)
       display.print("Stereo");
     else   
       display.print("Mono  ");
   }
-
   display.display();
 }
 
@@ -222,15 +215,15 @@ void setVolume( char v) {
   elapsedButton = millis();
 }
 
+//Main code here that loops
 void loop() {
   //Rotary encoder
-  aState = digitalRead(VOL_UP); // Reads the "current" state of the outputA
+  aState = digitalRead(VOL_UP);
   if ( (millis() - elapsedButton) > MIN_ELAPSED_TIME ) {
-    // check if some button is pressed
     if (digitalRead(BAND_UP) == LOW )
-      setBand('+'); // goes to the next band. 
+      setBand('+');
     else if (digitalRead(BAND_DOWN) == LOW )
-      setBand('-'); // goes to the previous band. 
+      setBand('-');
     else if (digitalRead(VOL_DOWN) != aState)
       setVolume('-');
     else if (digitalRead(VOL_UP) == aState)
