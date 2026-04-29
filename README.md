@@ -1,6 +1,6 @@
 # Squawk-2.0
 A radio station with a storage unit for walkie-talkies, w/ OLED screen & 3.5mm headphone jack connector
-SI4844 powered with Arduino Nano, PAM8403 amplifier
+SI4844 powered with Arduino Nano, PAM8403 amplifier with the [pu2clr](https://pu2clr.github.io/SI4844/) library.
 
 <img width="1920" height="960" alt="Radio-2026-04-28 000101" src="https://github.com/user-attachments/assets/28ec7cb4-83d6-4336-adbb-bf1c5156e014" />
 <img width="1920" height="960" alt="Radio-2026-04-28 000112" src="https://github.com/user-attachments/assets/76a83ad6-565a-442c-94d9-bc3e877fe70a" />
