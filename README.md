@@ -55,5 +55,9 @@ The BOM **with** specific values is here (Github [directory](https://github.com/
 ### 3D printed case
 The 3D printed case is not accounted for in the BOM as I don't know how much it will cost. The expected filament cost is around 10$ USD, but a lot of the parts can be repurposed with whatever you have at home (e.g. a tin box, an old drawer, cardboard, etc.)
 
+## Zine page
+<img width="676" height="1034" alt="image" src="https://github.com/user-attachments/assets/1f0ec35b-3b42-4107-860f-376ad4edf63c" />
+
+
 ## Credits
 Huge thanks to Ricardo for his amazing library and intuitive example code for the SI4844, which genuinely saved me so much time. [Link](https://pu2clr.github.io/SI4844/) to his repo and library. Thanks to the amazing community from Hack Club fallout for helping out my design as well, I couldn't have done it without them.
