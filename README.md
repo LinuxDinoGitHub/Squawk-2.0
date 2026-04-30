@@ -26,10 +26,10 @@ It's pretty simple, here is a layout of all the functions of the buttons you can
 - 3.5mm headphone jack to listen to the radio independently without interrupting neighbours, like a Walkman
 - Optimised 4-layer PCB (front, gnd_front, gnd_back, back) routing for good antenna connectivity
 
-## [Schematic](https://github.com/LinuxDinoGitHub/Squawk-2.0/tree/main/Schematic)
+## [Schematic](https://github.com/LinuxDinoGitHub/Squawk-2.0/tree/main/pcb)
 <img width="3508" height="2480" alt="image" src="https://github.com/user-attachments/assets/25ea800c-0b06-4be0-a5fd-cfb958ff6f4c" />
 
-## [PCB](https://github.com/LinuxDinoGitHub/Squawk-2.0/tree/main/Schematic)
+## [PCB](https://github.com/LinuxDinoGitHub/Squawk-2.0/tree/main/pcb)
 A simple, 4-layer PCB. 96mm x 81mm PCB with 3 mounting holes for M3 screws.
 ### First layer (Front)
 <img width="981" height="805" alt="image" src="https://github.com/user-attachments/assets/ea308864-e14e-4614-810a-26f8a153248b" />
@@ -49,16 +49,16 @@ Front
 Back
 <img width="932" height="783" alt="image" src="https://github.com/user-attachments/assets/e754293f-e941-4326-bddb-cf63ace13a80" />
 
-## [Firmware](https://github.com/LinuxDinoGitHub/Squawk-2.0/blob/main/Arduino%20Firmware/firmware.ino)
+## [Firmware](https://github.com/LinuxDinoGitHub/Squawk-2.0/blob/main/firmware/firmware.ino)
 After assembling your PCB, use the firmware.ino file in the repository to flash your Arduino Nano. You can customise messages and timings by editing the code with the Arduino IDE.
 
 ## [BOM](https://github.com/LinuxDinoGitHub/Squawk-2.0/tree/main/BOM)
-The BOM **without** specific values is linked here ([GitHub directory](https://github.com/LinuxDinoGitHub/Squawk-2.0/blob/main/BOM/BOM_kicad_generated.csv) or [Google Sheets](https://docs.google.com/spreadsheets/d/1nt2ZC4SuuWCHXpdcqgjWmxoxNzFQoS0aQbvXVXabcSM/edit?gid=0#gid=0). The total cost for the project should not exceed 13USD (after averaging costs out by dividing by the bulk bought quantity).
+The BOM **without** specific values is linked here ([GitHub directory](https://github.com/LinuxDinoGitHub/Squawk-2.0/blob/main/BOM_kicad_generated.csv) or [Google Sheets](https://docs.google.com/spreadsheets/d/1nt2ZC4SuuWCHXpdcqgjWmxoxNzFQoS0aQbvXVXabcSM/edit?gid=0#gid=0). The total cost for the project should not exceed 13USD (after averaging costs out by dividing by the bulk bought quantity).
 
-The BOM **with** specific values is here (Github [directory](https://github.com/LinuxDinoGitHub/Squawk-2.0/blob/main/BOM/BOM_with_links.csv) or [Google Sheets](https://docs.google.com/spreadsheets/d/1nt2ZC4SuuWCHXpdcqgjWmxoxNzFQoS0aQbvXVXabcSM/edit?gid=1614936167#gid=1614936167))
+The BOM **with** specific values is here (Github [directory](https://github.com/LinuxDinoGitHub/Squawk-2.0/blob/main/BOM_with_links.csv) or [Google Sheets](https://docs.google.com/spreadsheets/d/1nt2ZC4SuuWCHXpdcqgjWmxoxNzFQoS0aQbvXVXabcSM/edit?gid=1614936167#gid=1614936167))
 
 ### 3D printed case
-Use a slicer to print the following [file](https://github.com/LinuxDinoGitHub/Squawk-2.0/blob/main/3D_Model/Radio.step). The 3D printed case is not accounted for in the BOM due to the variation between suppliers. The expected filament cost is around 10$ USD, but a lot of the parts can be repurposed with whatever you have at home (e.g. a tin box, an old drawer, cardboard, etc.) 
+Use a slicer to print the following [file](https://github.com/LinuxDinoGitHub/Squawk-2.0/blob/main/models/Radio.step). The 3D printed case is not accounted for in the BOM due to the variation between suppliers. The expected filament cost is around 10$ USD.
 
 ## Zine page
 <img width="676" height="1034" alt="image" src="https://github.com/user-attachments/assets/1f0ec35b-3b42-4107-860f-376ad4edf63c" />
