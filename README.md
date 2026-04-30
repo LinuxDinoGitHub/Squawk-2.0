@@ -27,7 +27,7 @@ It's pretty simple, here is a layout of all the functions of the buttons you can
 - Optimised 4-layer PCB (front, gnd_front, gnd_back, back) routing for good antenna connectivity
 
 ## [Schematic](https://github.com/LinuxDinoGitHub/Squawk-2.0/tree/main/pcb)
-<img width="3508" height="2480" alt="image" src="https://github.com/user-attachments/assets/25ea800c-0b06-4be0-a5fd-cfb958ff6f4c" />
+<img width="2200" height="1700" alt="Print Schematic" src="https://github.com/user-attachments/assets/da10d078-448f-4f75-9898-b1b98b1ad7ad" />
 
 ## [PCB](https://github.com/LinuxDinoGitHub/Squawk-2.0/tree/main/pcb)
 A simple, 4-layer PCB. 96mm x 81mm PCB with 3 mounting holes for M3 screws.
