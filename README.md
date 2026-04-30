@@ -52,7 +52,7 @@ Back
 ## [Firmware](https://github.com/LinuxDinoGitHub/Squawk-2.0/blob/main/firmware/firmware.ino)
 After assembling your PCB, use the firmware.ino file in the repository to flash your Arduino Nano. You can customise messages and timings by editing the code with the Arduino IDE.
 
-## [BOM](https://github.com/LinuxDinoGitHub/Squawk-2.0/tree/main/BOM)
+## BOM
 The BOM **without** specific values is linked here ([GitHub directory](https://github.com/LinuxDinoGitHub/Squawk-2.0/blob/main/BOM_kicad_generated.csv) or [Google Sheets](https://docs.google.com/spreadsheets/d/1nt2ZC4SuuWCHXpdcqgjWmxoxNzFQoS0aQbvXVXabcSM/edit?gid=0#gid=0). The total cost for the project should not exceed 13USD (after averaging costs out by dividing by the bulk bought quantity).
 
 The BOM **with** specific values is here (Github [directory](https://github.com/LinuxDinoGitHub/Squawk-2.0/blob/main/BOM_with_links.csv) or [Google Sheets](https://docs.google.com/spreadsheets/d/1nt2ZC4SuuWCHXpdcqgjWmxoxNzFQoS0aQbvXVXabcSM/edit?gid=1614936167#gid=1614936167))
